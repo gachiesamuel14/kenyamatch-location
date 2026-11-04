@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KenyaMatch - Location-Based Dating for Kenya</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🇰🇪 KenyaMatch</div>
+    <nav>
+      <button id="loginBtn">Login / Sign Up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Connect with People Near You in Kenya</h1>
+      <p>Location-based matchmaking. Meet singles in Nairobi, Mombasa, Kisumu, Kiambu and more.</p>
+      <button class="cta" onclick="document.getElementById('loginBtn').click()">Get Started</button>
+    </section>
+
+    <section id="app" class="hidden">
+      <div class="filters">
+        <select id="county">
+          <option value="all">All Counties</option>
+          <option>Nairobi</option>
+          <option>Mombasa</option>
+          <option>Kisumu</option>
+          <option>Kiambu</option>
+          <option>Nakuru</option>
+        </select>
+        <select id="age">
+          <option value="all">Any Age</option>
+          <option>18-25</option>
+          <option>26-35</option>
+          <option>36+</option>
+        </select>
+        <button id="findNearby">Find Nearby</button>
+      </div>
+
+      <div id="matches" class="cards"></div>
+
+      <div id="profileModal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalName"></h2>
+          <img id="modalPhoto" src="" alt="">
+          <p id="modalBio"></p>
+          <p><strong>County:</strong> <span id="modalCounty"></span></p>
+          <p><strong>Interests:</strong> <span id="modalInterests"></span></p>
+          <button class="like">Like ❤️</button>
+          <button class="pass">Pass</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 KenyaMatch. Built for Kenyans. Safety first – report any issues.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
